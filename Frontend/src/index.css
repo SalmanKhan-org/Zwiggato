@@ -1,0 +1,30 @@
+
+@tailwind utilities;
+@tailwind utilities;
+
+.bg-slate-200 input:-webkit-autofill {
+  background-color: #e2e8f0 !important;
+  /* Tailwind's bg-slate-200 */
+  -webkit-box-shadow: 0 0 0px 1000px #e2e8f0 inset !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+.bg-white input:-webkit-autofill {
+  background-color: transparent !important;
+  /* Keep it white if parent is white */
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
