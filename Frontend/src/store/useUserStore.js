@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware'
 import axios from 'axios';
 import { toast } from 'react-toastify';
-const API_END_POINT = "http://localhost:8000/api/v1"
+const API_END_POINT = "https://zwiggato-ldwb.onrender.com/api/v1"
 axios.defaults.withCredentials = true
 
 
@@ -73,6 +73,7 @@ export const useUserStore = create()(persist((set) => ({
                 set({ loading: false, user: response.data.user, isAuth: true, isCheckingAuth:false });
             }
         } catch (error) {
+            toast.error(error?.response?.data?.error || "Something went wrong")
             set({ loading: false, isAuth:false, isCheckingAuth:false })
         }
     },

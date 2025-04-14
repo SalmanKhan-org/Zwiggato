@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware'
 import axios from 'axios';
 import { toast } from 'react-toastify';
-const API_END_POINT = "http://localhost:8000/api/v1"
+const API_END_POINT = "https://zwiggato-ldwb.onrender.com/api/v1"
 axios.defaults.withCredentials = true
 
 export const useRestaurantStore = create()(persist((set,get) => ({
