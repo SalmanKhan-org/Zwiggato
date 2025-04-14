@@ -1,2 +1,2 @@
 # Zwiggato
-This is a food App
+This is a food delivery App
